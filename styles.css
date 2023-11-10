@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    background:rgb(120, 200, 227)
+}
+
+:root {
+    --turquoise: #004E6C;
+    --orange: #e8871e;
+    --white: #ffffff;
+    --black: #000000;
+    --lightgray: #f3f3f3;
+    --main-font: 'Poppins', sans-serif;
+
+}
+
