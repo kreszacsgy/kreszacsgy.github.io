@@ -4,7 +4,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    background:rgb(120, 200, 227)
 }
 
 :root {
@@ -13,7 +12,194 @@
     --white: #ffffff;
     --black: #000000;
     --lightgray: #f3f3f3;
-    --main-font: 'Poppins', sans-serif;
+    --main-font: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+
+/*--------------------------------Header-----------------------------------------*/
+
+
+
+.header {
+    background-color: var(--turquoise);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    z-index: 10;
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.header-list {
+    display: flex;
+    flex-direction: row;
+}
+
+header a {
+    color: var(--white); 
+}
+
+.logo {
+    height: 10vh; 
+    padding: 0.5rem;  
+}
+
+@media screen and (min-width: 576px){
+
+    .header-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 60vw;} 
+    
+    .header-item a {
+        color: var(--white);
+        font-size: 1.25rem;
+        transition: color 0.4s;
+    }
+
+    .header-item a:hover {
+        color: var(--orange)
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .header-list {
+        width: 60vw;
+    }
+
+    .header {
+        padding: 1rem 2rem
+    }
+
+    .header-item a {
+        font-size: 1.5rem;
+    }
 
 }
 
+@media screen and (min-width: 992px){
+
+    .header-list {
+        width: 55vw;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .header-list {
+        width: 50vw;
+    }
+
+}
+
+@media screen and (min-width: 1400px){
+
+    .header-list {
+        width: 40vw;
+        max-width: 40vw;
+    }
+
+}
+
+/*--------------------------------Home-----------------------------------------*/
+
+
+.home {
+    height: 100vh;
+    background-color: var(--turquoise);
+    /*background-image: url(./assets/herobackground.png);*/
+    background-repeat: no-repeat;
+    background-position-x: right;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    font-weight: 700;  
+}
+
+
+
+.hero-background {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    height: 90vh;
+    z-index: 0;
+}
+
+
+
+
+.home-button {
+    color: var(--black);
+    font-size: 0.75rem;
+    border: 4px solid var(--orange);
+    padding: 0.5rem 1rem;
+    background-color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    z-index: 1;
+}
+
+.home-button:hover {
+    background: var(--white);
+    border: 4px solid var(--orange);
+    box-shadow: 1px 1px 5px 1px var(--black);
+    color: var(--orange)
+}
+
+.home-button:focus {
+    background: var(--white);
+    border: 4px solid var(--orange);
+    box-shadow: 1px 1px 5px 1px var(--black);
+    color: var(--orange)
+}
+
+
+h1 { 
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+h2 { 
+    color: var(--white);
+    margin-bottom: 40px;
+    z-index:2;
+}
+
+
+@media screen and (min-width: 576px){}
+
+@media screen and (min-width: 768px){
+    h1 {font-size: 3.5rem}
+    .header {padding: 1rem 2rem}
+}
+
+@media screen and (min-width: 992px){
+    h1 {font-size: 4rem}
+    h2 {font-size: 2rem}
+    .home-button {
+        font-size: 1rem;
+        padding: 1rem 2rem;}
+}

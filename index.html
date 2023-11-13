@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio page of Gyöngyi Kreszács</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
     <header class="header">
-        <a href="#home"><img src="./assets/logo.png" alt="Gyöngyi Kreszács logo"></a>
+        <a href="#home"><img class="logo" src="./assets/logo.png" alt="Gyöngyi Kreszács logo"></a>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="header-list">
+                <li class="header-item"><a href="#home">Home</a></li>
+                <li class="header-item"><a href="#about">About</a></li>
+                <li class="header-item"><a href="#projects">Projects</a></li>
+                <li class="header-item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main></main>
         <section class="home">
-            <h1>Gyöngyi Kreszács</h1>
-            <h2>Frontend Web Developer</h2>
-            <a href="#contact">Contact me</a>
+            <h1 class="home-name">Gyöngyi Kreszács</h1>
+            <h2 class="home-profession">Frontend Web Developer</h2>
+            <a href="#contact" class="home-button">Contact me</a>
+            <img class="hero-background" src="./assets/herobackground.png" alt="hero background">
         </section>
         <section class="about"></section>
         <section class="projects"></section>
