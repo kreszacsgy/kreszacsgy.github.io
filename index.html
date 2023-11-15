@@ -11,27 +11,54 @@
     <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-    <header class="header">
+    <header id="header">
         <a href="#home"><img class="logo" src="./assets/logo.png" alt="Gyöngyi Kreszács logo"></a>
-        <nav>
+        <nav class="header-nav-list">
             <ul class="header-list">
-                <li class="header-item"><a href="#home">Home</a></li>
-                <li class="header-item"><a href="#about">About</a></li>
-                <li class="header-item"><a href="#projects">Projects</a></li>
-                <li class="header-item"><a href="#contact">Contact</a></li>
+                <li class="header-list-item"><a href="#home">Home</a></li>
+                <li class="header-list-item"><a href="#about">About</a></li>
+                <li class="header-list-item"><a href="#projects">Projects</a></li>
+                <li class="header-list-item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main></main>
-        <section class="home">
+        <section id="home">
             <h1 class="home-name">Gyöngyi Kreszács</h1>
             <h2 class="home-profession">Frontend Web Developer</h2>
             <a href="#contact" class="home-button">Contact me</a>
             <img class="hero-background" src="./assets/herobackground.png" alt="hero background">
         </section>
-        <section class="about"></section>
-        <section class="projects"></section>
-        <section class="contact"></section> 
+        <section id="about">
+            <h2 class="about-title">About me</h2>
+            <div class="about-container">
+                <img class="about-picture" src="./assets/kgy.png" alt="Gyöngyi Kreszács picture">
+                <section class="about-content">
+                    <section class="about-introduction">
+                        <h3 class="about-hello">Hello, I'm</h3>
+                        <h2 class="about-name">Gyöngyi Kreszács</h2>
+                        <h3 class="about-profession">frontend web developer</h3>
+                        <p class="about-paragraph">I'm a beginner in web developing. I'm passionate about painting, drawing and making creative work, so I want to paint the Internet canvas with projects and lines of code.</p>
+                        <p class="about-paragraph">I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
+                    </section>
+                    <section class="skill">
+                        <ul class="skill-list">
+                            <li class="skill-list-item">Html</li>
+                            <li class="skill-list-item">CSS</li>
+                            <li class="skill-list-item">Python</li>
+                            <li class="skill-list-item">JavaScript</li>
+                            <li class="skill-list-item">React</li>
+                        </ul>
+                    </section>
+                    <div class="about-buttons">
+                        <a href="#contact" class="contact-button">Contact</a>
+                        <a href="#" class="CV-button">Resume</a>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section id="projects"></section>
+        <section id="contact"></section> 
     </main> 
     <footer>
 
