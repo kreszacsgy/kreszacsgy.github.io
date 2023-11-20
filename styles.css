@@ -135,8 +135,6 @@ header a {
     
 }
 
-
-
 .hero-background {
     position: absolute;
     top: 10vh;
@@ -213,7 +211,8 @@ header a {
 /*--------------------------------About-----------------------------------------*/
 #about {
     height:90vh;
-    padding:0 2rem;   
+    padding:0 2rem;  
+    position:relative; 
 }
 
 .about-container {
@@ -397,9 +396,8 @@ header a {
     .skill-title {
         font-size: 1.5rem;
     }
-
-
-
-
 }
 
+/*--------------------------------Projects-----------------------------------------*/
+
+    
