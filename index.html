@@ -105,11 +105,68 @@
             </section>
         </section>
         <section id="contact">
-
+            <h2 class="contact-title">Contact</h2>
+            <p class="contact-me-text">Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
+            <section class="contact-form-container">
+                <form class="contact-form" action="https://formspree.io/" method="POST">
+                    <section class="contact-form-field">
+                        <label class="contact-form-label" for="name">Name</label>
+                        <input
+                            required
+                            class="contact-form-input"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Enter Your Name"
+                        />
+                    </section>
+                    <section class="contact-form-field">
+                        <label class="contact-form-label" for="email">Email</label>
+                        <input
+                            required
+                            class="contact-form-input"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Enter Your Email"
+                        />
+                    </section>
+                    <section class="contact-form-field">
+                        <label class="contact-form-label" for="message">Message</label>
+                        <textarea
+                            required
+                            cols="30"
+                            rows="10"
+                            class="contact-form-input"
+                            name="message"
+                            id="message"
+                            placeholder="Enter Your Message"
+                        >
+                        </textarea>
+                    </section>
+                    <input type="submit" value="Submit" class="submit-btn" />
+                </form>
+                <ul class="contact-social">
+                    <li class="contact-social-item">
+                        <a href="https://www.linkedin.com" target="_blank"
+                            ><i class="fa-brands fa-linkedin-in"></i
+                        ></a>
+                    </li>
+                    <li class="contact-social-item">
+                        <a href="https://github.com" target="_blank"
+                            ><i class="fa-brands fa-github-alt"></i
+                        ></a>
+                    </li>
+                </ul>
+            </section>
         </section> 
     </main> 
     <footer>
-
+        <section class="footer-copyright">
+            <p class="footer-copyright_item">Copyright</p>
+            <span class="footer-copyrigt_item">&copy;</span>
+            <p class="footer-copyright_item">2023 Gyöngyi Kreszács</p>
+        </section>
     </footer>  
 </body>
 </html>

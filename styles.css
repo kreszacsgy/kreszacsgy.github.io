@@ -430,6 +430,7 @@ header a {
     border-radius:20px;
     flex-basis: 350px;
     flex-grow:1;
+    overflow:hidden;
 }
 
 .project-picture {
@@ -439,6 +440,11 @@ header a {
     height:auto;
     object-fit:cover;
     border-radius: 20px;
+    transition: transform 0.4s;
+}
+
+.project-item:hover img{
+    transform:scale(1.1);
 }
 
 .image-overlay a{
