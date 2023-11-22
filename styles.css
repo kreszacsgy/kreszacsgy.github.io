@@ -210,8 +210,7 @@ header a {
 
 /*--------------------------------About-----------------------------------------*/
 #about {
-    height:90vh;
-    padding:0 2rem;  
+    padding:0 2rem 2rem 2rem;  
     position:relative; 
 }
 
@@ -359,7 +358,7 @@ header a {
 @media screen and (min-width: 768px){   
 
     #about {
-        padding: 0 5rem
+        padding: 0 5rem 2rem 5rem;
     }
 }
 
@@ -400,4 +399,115 @@ header a {
 
 /*--------------------------------Projects-----------------------------------------*/
 
-    
+#projects {
+    padding:0 2rem 2rem 2rem;  
+    position:relative; 
+    background-color: var(--turquoise);
+} 
+
+.projects-title {
+    text-transform: uppercase;
+    display:block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight:700;
+    padding: 30px;
+    letter-spacing:0.1rem;
+    color: var(--white);
+}
+
+.projects-container {
+    padding:20px 0;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.project-item {
+    position:relative;
+    border-radius:20px;
+    flex-basis: 350px;
+    flex-grow:1;
+}
+
+.project-picture {
+    display:block;
+    max-width:100%;
+    min-width: 200px;
+    height:auto;
+    object-fit:cover;
+    border-radius: 20px;
+}
+
+.image-overlay a{
+    color:var(--white);
+    font-size: 2rem;
+    margin:0 10px;
+}
+
+.image-overlay a:hover{
+    color:var(--orange);
+}
+
+.image-overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding:10% 30% 10% 10%;
+    color:var(--white);
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.9));
+    transition: 0.4s;
+    opacity:0;
+    transition: opacity 0.3s;
+    border-radius:20px;
+}
+
+.overlay-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin:0 10px;
+}
+
+.image-overlay > * {
+    transform: translateY(20px);
+    transition:0.3s;
+}
+
+.image-overlay:hover {
+    opacity:1; 
+}   
+
+.image-overlay:hover > * {
+    transform: translateY(0);
+}
+
+@media screen and (min-width: 768px){   
+
+    #projects {
+        padding: 0 5rem 2rem 5rem;
+    }
+
+    .project-item {
+        position:relative;
+        border-radius:20px;
+        flex-basis: 400px;
+    }   
+}
+
+@media screen and (min-width: 992px){
+    .project-item {
+        position:relative;
+        border-radius:20px;
+        flex-basis: 450px;
+    }
+    .overlay-title{
+        font-size: 1.5rem;
+    }
+}
