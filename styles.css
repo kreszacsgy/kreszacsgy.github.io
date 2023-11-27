@@ -662,4 +662,17 @@ header a {
     font-size:0.7rem;
     color: var(--white);
     text-align:center;
- }
+}
+
+.top-btn {
+    color:var(--orange);
+    font-size: 2rem;
+    position:fixed;
+    bottom:2rem;
+    right:2rem;
+    margin-top:100vh;
+}
+
+.top-btn:hover {
+    color:var(--white)
+}
