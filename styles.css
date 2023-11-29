@@ -47,17 +47,78 @@ body {
 
 .header-list {
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
+    justify-content:space-evenly;
+    position:fixed;
+    top:10vh;
+    height:300px;
+    width:50vw;
+    min-width:150px;
+    max-width:200px;
+    background:var(--turquoise);
+    right:-200px;
+    visibility:hidden;
+    transition: right 0.4s, visibility 0.4s;
 }
 
 header a {
     color: var(--white); 
 }
 
+header a:hover {
+    color: var(--orange); 
+}
+
+.header-list-item {
+    margin: 0 auto;
+}
+
 .logo {
     height: 10vh; 
     padding: 0.5rem;  
 }
+
+.nav-checkbox{
+    display:none;
+}
+
+.nav-checkbox:checked ~ .header-list {
+    right:0;
+    visibility:visible;
+    box-shadow: -20px 20px 40px rgba(0,0,0,0.5);
+}
+
+.nav-checkbox-btn{
+    width:40px;
+    height:40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    cursor:pointer;
+}
+
+.nav-checkbox-line{
+    width:40px;
+    height:5px;
+    background-color: var(--white);
+    border-radius:5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-checkbox:checked + .nav-label > .nav-checkbox-btn > .line-one {
+    margin-top:13px;
+    transform: rotate(+45deg);
+} 
+
+.nav-checkbox:checked + .nav-label > .nav-checkbox-btn > .line-two {
+    transform: rotate(135deg);
+    margin-top:-14px;
+}
+
+.nav-checkbox:checked + .nav-label > .nav-checkbox-btn > .line-three {
+    opacity:0;;
+} 
 
 @media screen and (min-width: 576px){
 
@@ -66,7 +127,16 @@ header a {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        width: 60vw;} 
+        width: 60vw;
+        visibility:visible;
+        position:static;
+        max-width:60vw;
+        height:10vh;
+    } 
+
+    .nav-checkbox-btn {
+        display:none;
+    }
     
     .header-list-item a {
         color: var(--white);
@@ -94,8 +164,6 @@ header a {
     }
 
 }
-
-
 
 @media screen and (min-width: 992px){
 
@@ -150,12 +218,14 @@ header a {
     color: var(--white);
     margin-bottom: 40px;
     z-index: 1;
+    text-align:center;
 }
 
 .home-profession { 
     color: var(--white);
     margin-bottom: 40px;
     z-index:2;
+    text-align:center;
 }
 
 .home-button {
@@ -185,7 +255,6 @@ header a {
     color: var(--orange)
 }
 
-
 @media screen and (min-width: 576px){}
 
 @media screen and (min-width: 768px){
@@ -197,9 +266,7 @@ header a {
     .home-name {
         font-size: 3.5rem
     }
-}
-
-    
+}    
 
 @media screen and (min-width: 992px){
     .home-name {
@@ -218,6 +285,7 @@ header a {
 #about {
     padding:10vh 2rem 2rem 2rem;  
     position:relative; 
+    background-color: var(--white);
 }
 
 .about-container {
@@ -358,9 +426,6 @@ header a {
     color: var(--orange)
 }
 
-
-
-
 @media screen and (min-width: 576px){}
 
 @media screen and (min-width: 768px){   
@@ -435,6 +500,8 @@ header a {
     flex-basis: 350px;
     flex-grow:1;
     overflow:hidden;
+    flex-shrink:0;
+    max-width: 500px;
 }
 
 .project-picture {
@@ -669,10 +736,16 @@ header a {
     font-size: 2rem;
     position:fixed;
     bottom:2rem;
-    right:2rem;
+    right:0.5rem;
     margin-top:100vh;
 }
 
 .top-btn:hover {
-    color:var(--white)
+    color:var(--white);
+}
+
+@media screen and (min-width: 768px) {
+    .top-btn{
+        right:2rem;
+    }
 }
