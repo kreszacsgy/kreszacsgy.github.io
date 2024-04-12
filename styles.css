@@ -14,6 +14,7 @@
     --lightgray: #c6c6c6;
     --gray: #595959;
     --main-font: 'Montserrat', sans-serif;
+    --greyish-white:#d5d5d5;
 }
 
 html {
@@ -43,6 +44,7 @@ body {
     z-index: 10;
     padding: 1rem 2rem;
     font-weight: 700;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
 }
 
 .header-list {
@@ -194,7 +196,11 @@ header a:hover {
 
 #home {
     height: 100vh;
-    background-color: var(--turquoise);
+    background:  url(./assets/herobackground.png), var(--turquoise);
+    background-size:  100vh cover;
+    background-repeat: no-repeat;
+    background-position: top 10vh right;
+    background-attachment:fixed;
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -202,15 +208,6 @@ header a:hover {
     position: relative;
     font-weight: 700; 
     padding:2rem;    
-}
-
-.hero-background {
-    position: absolute;
-    top: 10vh;
-    right: 0;
-    height: 90vh;
-    min-width:400px;
-    z-index: 0;
 }
 
 .home-name { 
@@ -285,7 +282,7 @@ header a:hover {
 #about {
     padding:10vh 2rem 2rem 2rem;  
     position:relative; 
-    background-color: var(--white);
+    background-image: linear-gradient( 90deg, rgba(255,255,255,1), rgb(210, 210, 210) );
 }
 
 .about-container {
@@ -496,18 +493,16 @@ header a:hover {
 
 .project-item {
     position:relative;
+    width:60vw;
     border-radius:20px;
-    flex-basis: 350px;
-    flex-grow:1;
+    min-width: 350px;
     overflow:hidden;
-    flex-shrink:0;
-    max-width: 500px;
+    cursor:pointer;
 }
 
 .project-picture {
     display:block;
-    max-width:100%;
-    min-width: 200px;
+    width:100%;
     height:auto;
     object-fit:cover;
     border-radius: 20px;
@@ -565,6 +560,7 @@ header a:hover {
     transform: translateY(0);
 }
 
+
 @media screen and (min-width: 768px){   
 
     #projects {
@@ -572,18 +568,15 @@ header a:hover {
     }
 
     .project-item {
-        position:relative;
-        border-radius:20px;
-        flex-basis: 400px;
+        width: 50vw;
     }   
 }
 
 @media screen and (min-width: 992px){
 
     .project-item {
-        position:relative;
-        border-radius:20px;
-        flex-basis: 450px;
+        width:40vw;
+        max-width: 600px;
     }
     .overlay-title{
         font-size: 1.5rem;
@@ -594,7 +587,8 @@ header a:hover {
 
 #contact {
     padding:10vh 2rem 2rem 2rem;  
-    position:relative;  
+    position:relative; 
+    
 } 
 
 #contact::before {
@@ -602,13 +596,15 @@ header a:hover {
     background-image: url(./assets/contact.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: top 10vh center;
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     opacity:0.5;
-    filter: grayscale(100%);    
+    filter: grayscale(100%); 
 }
 
 .contact-title {
