@@ -344,13 +344,61 @@ header a:hover {
     margin-bottom:20px;
 }
 
-.skill-list{
+.skill{
+    width:400px;
+    position:relative;
+    overflow: hidden;
+    
+}
+
+.skill-list-container {
+    mask-image: linear-gradient(90deg, transparent, #ffffff 20%, #ffffff 80%, transparent);
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap:10px;
-    margin-bottom:10px;
+    flex-wrap: nowrap;
+    
 }
+    
+
+
+.skill-list{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+   
+    animation: animate 20s linear infinite;
+    animation-delay: -20s;
+}
+
+.second {
+    animation: animate2 20s linear infinite;
+    animation-delay: -10s;
+}
+
+
+    
+
+@keyframes animate{
+    0%{
+        transform: translateX(100%)
+    }
+    100%{
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes animate2{
+    0%{
+        transform: translateX(0%)
+    }
+    100%{
+        transform: translateX(-200%)
+    }
+}
+
+
+
 
 .skill-list-item {
     padding: 0.5rem 1rem;
@@ -358,6 +406,14 @@ header a:hover {
     border-radius:10px;
     font-weight: 700;
     color: var(--gray);
+    text-transform:uppercase;
+    transition: 0.5s;
+    margin:5px;
+}
+
+.skill-list-item:hover {
+    background-color: var(--orange);
+    cursor:pointer;
 }
 
 .about-buttons {
