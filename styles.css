@@ -290,7 +290,8 @@ header a:hover {
     flex-direction: row-reverse;
     flex-wrap: wrap;
     align-items:center;
-    justify-content: center;
+    justify-content:center;
+    gap:40px
 }
 
 .about-content {
@@ -299,6 +300,7 @@ header a:hover {
     justify-content:space-between;
     padding: 20px;
     flex: 2 1 510px;
+    max-width: 800px;
 }
 
 .about-picture {
@@ -308,7 +310,7 @@ header a:hover {
     object-fit:cover;
     min-width: 200px;
     max-width:500px;
-    max-height:500px;
+    max-height:600px;
     padding: 20px;
     flex: 1 0 300px;
     align-self: flex-start;
@@ -344,8 +346,8 @@ header a:hover {
     margin-bottom:20px;
 }
 
-.skill{
-    width:400px;
+.skill {
+    width:80vw;
     position:relative;
     overflow: hidden;
     
@@ -407,6 +409,7 @@ header a:hover {
     font-weight: 700;
     color: var(--gray);
     text-transform:uppercase;
+    letter-spacing: 0.1rem;
     transition: 0.5s;
     margin:5px;
 }
@@ -486,6 +489,11 @@ header a:hover {
     #about {
         padding: 10vh 5rem 2rem 5rem;
     }
+
+
+    .skill {
+         width:60vw;
+    }
 }
 
 @media screen and (min-width: 992px){
@@ -516,6 +524,10 @@ header a:hover {
     
     .skill-title {
         font-size: 1.5rem;
+    }
+
+    .skill {
+        width:500px
     }
 }
 
