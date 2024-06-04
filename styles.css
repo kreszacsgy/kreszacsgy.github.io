@@ -364,11 +364,9 @@ header a:hover {
 
 
 .skill-list{
-    
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-   
     animation: animate 20s linear infinite;
     animation-delay: -20s;
 }
