@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fe4df253c9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css"/>
 </head>
 <body>
     
@@ -18,11 +18,9 @@
         <nav class="header-nav-list">
             <input type="checkbox" name="nav-checkbox" id="nav-checkbox" class="nav-checkbox">
             <label class="nav-label" for="nav-checkbox">
-                <div class="nav-checkbox-btn">
-                    <div class="nav-checkbox-line line-one"></div>
-                    <div class="nav-checkbox-line line-two"></div>
-                    <div class="nav-checkbox-line line-three"></div>
-                 </div>
+                <span class="nav-checkbox-line line-one"></span>
+                <span class="nav-checkbox-line line-two"></span>
+                <span class="nav-checkbox-line line-three"></span>                
             </label>
             <ul class="header-list">
                 <li class="header-list-item"><a href="#home">Home</a></li>
@@ -42,7 +40,7 @@
             <h2 class="about-title">About me</h2>
             <div class="about-container">
                 <img class="about-picture" src="./assets/kgy.png" alt="Gyöngyi Kreszács picture">
-                <section class="about-content">
+                <div class="about-content">
                     <section class="about-introduction">
                         <h3 class="about-hello">Hello, I'm</h3>
                         <h2 class="about-name">Gyöngyi Kreszács</h2>
@@ -79,12 +77,12 @@
                         <a href="#contact" class="contact-button">Contact</a>
                         <a href="#" class="CV-button">Resume</a>
                     </div>
-                </section>
+                </div>
             </div>
         </section>
         <section id="projects">
             <h2 class="projects-title">Projects</h2>
-            <section class="projects-container">
+            <div class="projects-container">
                 <section class="project-item">
                     <img class="project-picture" src="./assets/Chrissie-salon.png" alt="Hairsalon">                    
                     <div class="image-overlay">
@@ -125,14 +123,14 @@
                         <a href="#" target="blank"><i class="fa-solid fa-circle-arrow-right"></i></a>
                     </div>
                 </section>
-            </section>
+            </div>
         </section>
         <section id="contact">
             <h2 class="contact-title">Contact</h2>
             <p class="contact-me-text">Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
-            <section class="contact-form-container">
-                <form class="contact-form" action="https://formspree.io/" method="POST">
-                    <section class="contact-form-field">
+            <div class="contact-form-container">
+                <form class="contact-form" action="https://formspree.io/f/xoqgorre" method="POST">
+                    <div class="contact-form-field">
                         <label class="contact-form-label" for="name">Name</label>
                         <input
                             required
@@ -142,8 +140,8 @@
                             id="name"
                             placeholder="Enter Your Name"
                         />
-                    </section>
-                    <section class="contact-form-field">
+                    </div>
+                    <div class="contact-form-field">
                         <label class="contact-form-label" for="email">Email</label>
                         <input
                             required
@@ -153,8 +151,8 @@
                             id="email"
                             placeholder="Enter Your Email"
                         />
-                    </section>
-                    <section class="contact-form-field">
+                    </div>
+                    <div class="contact-form-field">
                         <label class="contact-form-label" for="message">Message</label>
                         <textarea
                             cols="20"
@@ -165,10 +163,10 @@
                             placeholder="Enter Your Message"
                             required
                         ></textarea>
-                    </section>
-                    <input type="submit" value="Submit" class="submit-btn" />
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn"/>
                 </form>
-            </section>
+            </div>
         </section> 
     </main> 
     <footer id="footer">        
