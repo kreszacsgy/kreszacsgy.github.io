@@ -824,10 +824,17 @@ header a:hover {
     bottom:2rem;
     right:0.5rem;
     margin-top:100vh;
+    opacity:0;
+    transition: opacity 0.5s;
 }
+
 
 .top-btn:hover {
     color:var(--white);
+}
+
+.top-btn.visible{
+    opacity:1;
 }
 
 @media screen and (min-width: 768px) {
