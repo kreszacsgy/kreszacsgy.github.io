@@ -2,6 +2,8 @@ const backToTopButton=document.querySelector(".js-top-btn");
 const hamburgerBtn=document.querySelector(".js-hamburger-btn");
 const navList=document.querySelector(".js-nav-list");
 const navItems=document.querySelectorAll(".js-nav-list-item");
+const sections=document.querySelectorAll("main > section");
+const navLinks=document.querySelectorAll(".js-nav-list a");
 
 
 //scroll top button
@@ -41,6 +43,29 @@ function hamburgerMenu() {
     });
 };
 
+//navbar link stays highlighted 
+
+function pageNavigation() {
+    window.addEventListener("scroll",()=>{
+        let current="";
+        sections.forEach( section=> {
+            const sectionTop=section.offsetTop;            
+            const sectionHeight=section.clientHeight;            
+            if(scrollY >= (sectionTop-sectionHeight/3)){
+            current=section.getAttribute("id");
+            }            
+        })
+        navLinks.forEach (link =>
+            {link.classList.remove("active");
+            if (link.classList.contains(current)){
+                link.classList.add("active");
+            }
+        });
+    });
+};
+
+
 
 scrollTopButtonVisibility();
 hamburgerMenu();
+pageNavigation();

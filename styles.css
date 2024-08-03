@@ -65,7 +65,8 @@ header a {
     color: var(--white); 
 }
 
-header a:hover {
+header a:hover,
+header a.active {
     color: var(--orange); 
 }
 
