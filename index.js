@@ -4,6 +4,8 @@ const navList=document.querySelector(".js-nav-list");
 const navItems=document.querySelectorAll(".js-nav-list-item");
 const sections=document.querySelectorAll("main > section");
 const navLinks=document.querySelectorAll(".js-nav-list a");
+const dynamicText = document.querySelector(".about-type");
+const words = [ "Creator","Designer", "Developer"];
 
 
 //scroll top button
@@ -64,8 +66,34 @@ function pageNavigation() {
     });
 };
 
+//typing effect on about page
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typeEffect = ()=> {
+    const currentWord = words[wordIndex];
+    const currentChar =currentWord.substring(0, charIndex);
+    dynamicText.textContent = currentChar;
+    // type the next character
+    if (!isDeleting && charIndex < currentWord.length) {
+        charIndex++;
+        setTimeout(typeEffect,200);
+    // remove the next character
+    } else if (isDeleting && charIndex > 0){
+        charIndex--;
+        setTimeout(typeEffect,100);
+    //switch to the next word
+    } else {
+        isDeleting=!isDeleting;
+        wordIndex= !isDeleting? (wordIndex+1) % words.length :wordIndex;
+        setTimeout(typeEffect,1200);
+    }
+}
 
 
 scrollTopButtonVisibility();
 hamburgerMenu();
 pageNavigation();
+typeEffect();

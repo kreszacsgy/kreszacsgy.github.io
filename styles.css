@@ -235,6 +235,23 @@ header a.active {
     margin-bottom: 40px;
     z-index:2;
     text-align:center;
+    width: 14ch;
+    animation: typing 2s steps(14), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--orange);
+}
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+      border-color: transparent
+    }
 }
 
 .home-button {
@@ -349,6 +366,15 @@ header a.active {
     margin-bottom: 20px;
 }
 
+.about-type{
+    position:relative;
+    color: var(--orange);
+    animation: blink .7s infinite;
+    border-right: 3px solid var(--orange);
+    margin-left:4px;
+}
+
+
 .about-paragraph {
     margin-bottom:20px;
 }
@@ -371,8 +397,6 @@ header a.active {
     flex-wrap: nowrap;
     
 }
-    
-
 
 .skill-list{
     display: flex;
@@ -385,10 +409,7 @@ header a.active {
 .second {
     animation: animate2 20s linear infinite;
     animation-delay: -10s;
-}
-
-
-    
+}    
 
 @keyframes animate{
     0%{
@@ -407,7 +428,6 @@ header a.active {
         transform: translateX(-200%)
     }
 }
-
 
 .skill-list-item {
     padding: 0.5rem 1rem;
@@ -438,7 +458,6 @@ header a.active {
     flex-direction: row;
     gap:10px;
 }
-
 
 .contact-button {
     color: var(--black);
