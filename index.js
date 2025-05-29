@@ -4,8 +4,10 @@ const navList=document.querySelector(".js-nav-list");
 const navItems=document.querySelectorAll(".js-nav-list-item");
 const sections=document.querySelectorAll("main > section");
 const navLinks=document.querySelectorAll(".js-nav-list a");
+const homeProfession=document.querySelector(".home-profession");
 const dynamicText = document.querySelector(".about-type");
-const words = [ "Creator","Designer", "Developer"];
+const aboutWords = [ "Creator","Designer", "Developer"];
+const professionWords=["Web Developer","UX/UI Designer"]
 
 
 //scroll top button
@@ -66,7 +68,10 @@ function pageNavigation() {
     });
 };
 
-//typing effect on about page
+
+//typing effect
+
+const createTypingEffect = (element, words) => {
 
 let wordIndex = 0;
 let charIndex = 0;
@@ -75,7 +80,7 @@ let isDeleting = false;
 const typeEffect = ()=> {
     const currentWord = words[wordIndex];
     const currentChar =currentWord.substring(0, charIndex);
-    dynamicText.textContent = currentChar;
+    element.textContent = currentChar;
     // type the next character
     if (!isDeleting && charIndex < currentWord.length) {
         charIndex++;
@@ -90,10 +95,17 @@ const typeEffect = ()=> {
         wordIndex= !isDeleting? (wordIndex+1) % words.length :wordIndex;
         setTimeout(typeEffect,1200);
     }
+    
 }
+typeEffect();
+}
+
+ 
 
 
 scrollTopButtonVisibility();
 hamburgerMenu();
 pageNavigation();
-typeEffect();
+//typing effect on about page
+createTypingEffect(homeProfession, professionWords);
+createTypingEffect(dynamicText, aboutWords);

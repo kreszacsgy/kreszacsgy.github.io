@@ -222,7 +222,7 @@ header a.active {
     padding:2rem;    
 }
 
-.home-name { 
+.home-name {
     font-size: 3rem;
     color: var(--white);
     margin-bottom: 40px;
@@ -232,20 +232,12 @@ header a.active {
 
 .home-profession { 
     color: var(--white);
-    margin-bottom: 40px;
+    min-height:40px;
     z-index:2;
-    text-align:center;
-    width: 14ch;
-    animation: typing 2s steps(14), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
+    text-align:center;     
+    position:relative;
+    animation: blink .7s infinite;
     border-right: 3px solid var(--orange);
-}
-
-@keyframes typing {
-    from {
-      width: 0
-    }
 }
 
 @keyframes blink {
@@ -259,6 +251,7 @@ header a.active {
     font-size: 0.85rem;
     border: 4px solid var(--orange);
     padding: 1rem 2rem;
+    margin-top:30px;
     background-color: var(--orange);
     text-transform: uppercase;
     letter-spacing: 0.1rem;
